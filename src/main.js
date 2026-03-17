@@ -351,7 +351,7 @@ function renderBlog(data) {
       <div class="blog-grid stagger-children">
         ${articles.map((article, i) => `
         <div class="blog-card ${i === 0 ? 'blog-card--featured' : ''} reveal" data-article-id="${article.id || i}">
-          ${article.image ? `<img class="blog-card__image" src="${article.image}" alt="${article.titre || article.title || ''}" loading="lazy">` : ''}
+          ${article.image ? `<img class="blog-card__image" src="${article.image}" alt="${article.titre || article.title || ''}" loading="lazy" onerror="this.outerHTML='<div class=\\'blog-card__image-placeholder\\'>H</div>'">` : '<div class="blog-card__image-placeholder">H</div>'}
           <p class="blog-card__date">${formatDate(article.date)}</p>
           <h3 class="blog-card__title">${article.titre || article.title || ''}</h3>
           <p class="blog-card__excerpt">${article.description || article.extrait || article.excerpt || ''}</p>
