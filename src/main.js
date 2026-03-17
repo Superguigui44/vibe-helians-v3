@@ -143,12 +143,32 @@ function renderAccueil(data) {
   <main>
     <section class="hero">
       <div class="container">
-        <p class="hero__eyebrow">Cabinet d'avocats · Paris</p>
-        <h1 class="hero__title">${(hero.titre || '').replace(/(droit)\s/, '$1<br>')}</h1>
-        <p class="hero__subtitle">${hero.description || hero.sousTitre || ''}</p>
-        <div class="hero__actions">
-          <a href="/contact.html" class="btn btn--primary">Nous contacter</a>
-          <a href="/cabinet.html" class="btn btn--ghost">Découvrir le cabinet</a>
+        <div class="hero__grid">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Cabinet d'avocats · Paris</p>
+            <h1 class="hero__title">${(hero.titre || '').replace(/(droit)\s/, '$1<br>')}</h1>
+            <p class="hero__subtitle">${hero.description || hero.sousTitre || ''}</p>
+            <div class="hero__actions">
+              <a href="/contact.html" class="btn btn--primary">Nous contacter</a>
+              <a href="/cabinet.html" class="btn btn--ghost">Découvrir le cabinet</a>
+            </div>
+          </div>
+          <div class="hero__aside">
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <span class="hero__stat-number">30+</span>
+                <span class="hero__stat-label">années d'expérience</span>
+              </div>
+              <div class="hero__stat">
+                <span class="hero__stat-number">7</span>
+                <span class="hero__stat-label">domaines d'expertise</span>
+              </div>
+              <div class="hero__stat">
+                <span class="hero__stat-number">Paris 1<sup>er</sup></span>
+                <span class="hero__stat-label">rue d'Argenteuil</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -209,21 +229,25 @@ function renderCabinet(data) {
     'Noémie PAJOT': '/images/noemie-pajot.jpg',
   }
 
+  // Extract first paragraph as intro, rest as detailed description
+  const descArray = Array.isArray(cabinet.description) ? cabinet.description
+    : typeof cabinet.description === 'string' ? [cabinet.description] : []
+  const intro = descArray[0] || ''
+  const details = descArray.slice(1)
+
   return `
   <main class="expertise-page">
     <div class="container">
       <p class="expertise-page__eyebrow reveal">Le cabinet</p>
       <h1 class="expertise-page__title reveal">${cabinet.titre || 'Le Cabinet Hélians'}</h1>
 
-      ${toHtml(cabinet.description, 'reveal')}
-
-      <div class="divider"></div>
+      ${intro ? `<p class="cabinet-intro reveal">${intro}</p>` : ''}
 
       <h2 class="section-heading reveal">${equipe.titre || 'Notre équipe'}</h2>
       <div class="team-grid stagger-children">
         ${membres.map(m => `
         <div class="team-member reveal">
-          <img src="${m.photo || photoMap[m.nom] || ''}" alt="${m.nom}" class="team-member__photo" />
+          <img src="${m.photo || photoMap[m.nom] || ''}" alt="Photo de ${m.nom}" class="team-member__photo" />
           <h3 class="team-member__name">${m.nom || ''}</h3>
           <p class="team-member__role">${m.role || ''}</p>
           ${(m.biographie || []).map(b => `<p class="team-member__bio">${b}</p>`).join('')}
@@ -233,6 +257,14 @@ function renderCabinet(data) {
           </ul>` : ''}
         </div>`).join('')}
       </div>
+
+      ${details.length > 0 ? `
+      <div class="divider"></div>
+
+      <h2 class="section-heading reveal">Notre engagement</h2>
+      <div class="cabinet-details reveal">
+        ${details.map(d => `<p>${d}</p>`).join('')}
+      </div>` : ''}
 
       <div class="divider"></div>
 
