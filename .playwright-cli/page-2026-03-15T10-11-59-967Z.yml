@@ -1,0 +1,122 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "Hélians Hélians Avocats Conseils" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Hélians" [ref=e6]
+        - generic [ref=e7]:
+          - text: Hélians
+          - generic [ref=e8]: Avocats Conseils
+      - generic [ref=e9]:
+        - link "Accueil" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Le Cabinet" [ref=e11] [cursor=pointer]:
+          - /url: /cabinet.html
+        - generic [ref=e13] [cursor=pointer]: Expertises
+        - link "Blog" [ref=e14] [cursor=pointer]:
+          - /url: /blog.html
+        - link "Contact" [ref=e15] [cursor=pointer]:
+          - /url: /contact.html
+  - generic [ref=e16]:
+    - link "Accueil" [ref=e17] [cursor=pointer]:
+      - /url: /
+    - link "Le Cabinet" [ref=e18] [cursor=pointer]:
+      - /url: /cabinet.html
+    - generic [ref=e19]: Nos expertises
+    - link "Expropriation — Défense des expropriés" [ref=e20] [cursor=pointer]:
+      - /url: /expropriation.html
+    - link "Préemption" [ref=e21] [cursor=pointer]:
+      - /url: /preemption.html
+    - link "Immobilier" [ref=e22] [cursor=pointer]:
+      - /url: /immobilier.html
+    - link "Construction publique" [ref=e23] [cursor=pointer]:
+      - /url: /construction.html
+    - link "Hôpitaux publics & secteur médico-social" [ref=e24] [cursor=pointer]:
+      - /url: /hopitaux.html
+    - link "Urbanisme" [ref=e25] [cursor=pointer]:
+      - /url: /urbanisme.html
+    - link "Baux commerciaux" [ref=e26] [cursor=pointer]:
+      - /url: /baux.html
+    - link "Blog" [ref=e27] [cursor=pointer]:
+      - /url: /blog.html
+    - link "Nous contacter" [ref=e28] [cursor=pointer]:
+      - /url: /contact.html
+  - main [ref=e29]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - paragraph [ref=e33]: Nos expertises
+        - heading "Expropriation — Défense des expropriés" [level=1] [ref=e34]
+        - generic [ref=e35]:
+          - paragraph [ref=e36]: Faire l'objet d'une procédure d'expropriation est une épreuve qui bouleverse un projet de vie ou d'entreprise. Il est essentiel de se faire accompagner le plus tôt possible par un avocat expérimenté.
+          - paragraph [ref=e37]: L'assistance d'un avocat permet aux personnes et sociétés concernées d'être défendues à chaque étape de la procédure, tant devant la juridiction de l'expropriation que face aux administrations compétentes.
+          - paragraph [ref=e38]: Les conseils d'un avocat spécialisé donnent accès aux subtilités de la procédure et, surtout, permettent de déterminer au plus juste le montant de l'indemnité à laquelle vous pouvez prétendre.
+          - paragraph [ref=e39]: Depuis plus de vingt ans, Gilles Caillet conseille et défend des particuliers et des entreprises confrontés à l'expropriation, notamment dans le cadre du Grand Paris Express.
+          - paragraph [ref=e40]: Il a constitué une équipe d'avocats spécialisés dans ce domaine.
+          - paragraph [ref=e41]: "Le cabinet Hélians défend également les propriétaires et commerçants riverains des opérations d'expropriation : expertise préventive, dommages de chantier et pertes d'exploitation."
+          - heading "Domaines d'intervention" [level=3] [ref=e42]
+          - list [ref=e43]:
+            - listitem [ref=e44]: Procédure en constatation du défaut de base légale de l'ordonnance de transfert de propriété
+            - listitem [ref=e45]: Droit de rétrocession
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - heading "Nos expertises" [level=4] [ref=e48]
+          - link "Expropriation — Défense des expropriés" [ref=e49] [cursor=pointer]:
+            - /url: /expropriation.html
+          - link "Préemption" [ref=e50] [cursor=pointer]:
+            - /url: /preemption.html
+          - link "Immobilier" [ref=e51] [cursor=pointer]:
+            - /url: /immobilier.html
+          - link "Construction publique" [ref=e52] [cursor=pointer]:
+            - /url: /construction.html
+          - link "Hôpitaux publics & secteur médico-social" [ref=e53] [cursor=pointer]:
+            - /url: /hopitaux.html
+          - link "Urbanisme" [ref=e54] [cursor=pointer]:
+            - /url: /urbanisme.html
+          - link "Baux commerciaux" [ref=e55] [cursor=pointer]:
+            - /url: /baux.html
+        - generic [ref=e56]:
+          - heading "Références — Dossiers en cours" [level=4] [ref=e57]
+          - list [ref=e58]:
+            - listitem [ref=e59]: Négociation pour des particuliers et des entreprises propriétaires concernés par des expropriations totales (maisons, appartements, locaux commerciaux) ou en tréfonds dans le cadre du Grand Paris Express (Société du Grand Paris — lignes 15, 16 et 17)
+            - listitem [ref=e60]: Assistance de syndicats de copropriétaires et de propriétaires d'immeubles visés par la procédure d'expropriation liée au prolongement de la ligne de tramway T1 (Hauts-de-Seine)
+            - listitem [ref=e61]: Assistance d'une entreprise pour négocier les indemnités liées au déménagement de son activité expropriée (Oise)
+            - listitem [ref=e62]: Négociation des indemnités dues en contrepartie de l'expropriation de fonds de commerce (Seine-et-Marne)
+  - contentinfo [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - img "Hélians" [ref=e68]
+            - generic [ref=e69]: Hélians
+          - paragraph [ref=e70]: Société d'avocats dédiée au droit immobilier et au droit public.
+        - generic [ref=e71]:
+          - heading "Le cabinet" [level=4] [ref=e72]
+          - link "Accueil" [ref=e73] [cursor=pointer]:
+            - /url: /
+          - link "L'équipe" [ref=e74] [cursor=pointer]:
+            - /url: /cabinet.html
+          - link "Blog" [ref=e75] [cursor=pointer]:
+            - /url: /blog.html
+          - link "Contact" [ref=e76] [cursor=pointer]:
+            - /url: /contact.html
+        - generic [ref=e77]:
+          - heading "Expertises" [level=4] [ref=e78]
+          - link "Expropriation — Défense des expropriés" [ref=e79] [cursor=pointer]:
+            - /url: /expropriation.html
+          - link "Préemption" [ref=e80] [cursor=pointer]:
+            - /url: /preemption.html
+          - link "Immobilier" [ref=e81] [cursor=pointer]:
+            - /url: /immobilier.html
+          - link "Construction publique" [ref=e82] [cursor=pointer]:
+            - /url: /construction.html
+          - link "Hôpitaux publics & secteur médico-social" [ref=e83] [cursor=pointer]:
+            - /url: /hopitaux.html
+        - generic [ref=e84]:
+          - heading "Contact" [level=4] [ref=e85]
+          - paragraph [ref=e86]: 7 rue d'Argenteuil, 75001 Paris
+          - link "01.44.01.09.59" [ref=e87] [cursor=pointer]:
+            - /url: tel:0144010959
+      - generic [ref=e88]:
+        - generic [ref=e89]: © 2026 Hélians — Tous droits réservés
+        - link "Mentions légales" [ref=e90] [cursor=pointer]:
+          - /url: /mentions.html

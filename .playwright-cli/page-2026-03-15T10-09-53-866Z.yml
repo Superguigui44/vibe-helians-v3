@@ -1,0 +1,155 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "Hélians Hélians Avocats Conseils" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Hélians" [ref=e6]
+        - generic [ref=e7]:
+          - text: Hélians
+          - generic [ref=e8]: Avocats Conseils
+      - generic [ref=e9]:
+        - link "Accueil" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Le Cabinet" [ref=e11] [cursor=pointer]:
+          - /url: /cabinet.html
+        - generic [ref=e13] [cursor=pointer]: Expertises
+        - link "Blog" [ref=e14] [cursor=pointer]:
+          - /url: /blog.html
+        - link "Contact" [ref=e15] [cursor=pointer]:
+          - /url: /contact.html
+  - generic [ref=e16]:
+    - link "Accueil" [ref=e17] [cursor=pointer]:
+      - /url: /
+    - link "Le Cabinet" [ref=e18] [cursor=pointer]:
+      - /url: /cabinet.html
+    - generic [ref=e19]: Nos expertises
+    - link "Expropriation — Défense des expropriés" [ref=e20] [cursor=pointer]:
+      - /url: /expropriation.html
+    - link "Préemption" [ref=e21] [cursor=pointer]:
+      - /url: /preemption.html
+    - link "Immobilier" [ref=e22] [cursor=pointer]:
+      - /url: /immobilier.html
+    - link "Construction publique" [ref=e23] [cursor=pointer]:
+      - /url: /construction.html
+    - link "Hôpitaux publics & secteur médico-social" [ref=e24] [cursor=pointer]:
+      - /url: /hopitaux.html
+    - link "Urbanisme" [ref=e25] [cursor=pointer]:
+      - /url: /urbanisme.html
+    - link "Baux commerciaux" [ref=e26] [cursor=pointer]:
+      - /url: /baux.html
+    - link "Blog" [ref=e27] [cursor=pointer]:
+      - /url: /blog.html
+    - link "Nous contacter" [ref=e28] [cursor=pointer]:
+      - /url: /contact.html
+  - main [ref=e29]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Cabinet d'avocats · Paris
+      - heading "Cabinet d'avocats dédié au droit immobilier et au droit public" [level=1] [ref=e33]
+      - paragraph [ref=e34]: Hélians est une société d'avocats exclusivement consacrée à l'immobilier et au droit public, avec un savoir-faire particulier en matière d'expropriation.
+      - generic [ref=e35]:
+        - link "Nous contacter" [ref=e36] [cursor=pointer]:
+          - /url: /contact.html
+        - link "Découvrir le cabinet →" [ref=e37] [cursor=pointer]:
+          - /url: /cabinet.html
+    - generic [ref=e38]:
+      - heading "Nos domaines d'expertise" [level=2] [ref=e39]
+      - generic [ref=e40]:
+        - link "01 Expropriation Défense des expropriés, négociation des indemnités et accompagnement à chaque étape de la procédure." [ref=e41] [cursor=pointer]:
+          - /url: /expropriation.html
+          - generic [ref=e42]: "01"
+          - heading "Expropriation" [level=3] [ref=e43]
+          - paragraph [ref=e44]: Défense des expropriés, négociation des indemnités et accompagnement à chaque étape de la procédure.
+        - link "02 Préemption Contestation des décisions de préemption, purge du droit de préemption et fixation du prix." [ref=e45] [cursor=pointer]:
+          - /url: /preemption.html
+          - generic [ref=e46]: "02"
+          - heading "Préemption" [level=3] [ref=e47]
+          - paragraph [ref=e48]: Contestation des décisions de préemption, purge du droit de préemption et fixation du prix.
+        - 'link "03 Immobilier Conseil et contentieux à toutes les étapes de la vie d''un immeuble : vente, construction, copropriété, baux." [ref=e49] [cursor=pointer]':
+          - /url: /immobilier.html
+          - generic [ref=e50]: "03"
+          - heading "Immobilier" [level=3] [ref=e51]
+          - paragraph [ref=e52]: "Conseil et contentieux à toutes les étapes de la vie d'un immeuble : vente, construction, copropriété, baux."
+        - link "04 Construction publique Marchés publics de travaux, suivi de chantier, expertises judiciaires et litiges de construction." [ref=e53] [cursor=pointer]:
+          - /url: /construction.html
+          - generic [ref=e54]: "04"
+          - heading "Construction publique" [level=3] [ref=e55]
+          - paragraph [ref=e56]: Marchés publics de travaux, suivi de chantier, expertises judiciaires et litiges de construction.
+        - link "05 Hôpitaux & secteur médico-social Accompagnement juridique des établissements de santé dans leurs projets immobiliers et la gestion de leurs personnels." [ref=e57] [cursor=pointer]:
+          - /url: /hopitaux.html
+          - generic [ref=e58]: "05"
+          - heading "Hôpitaux & secteur médico-social" [level=3] [ref=e59]
+          - paragraph [ref=e60]: Accompagnement juridique des établissements de santé dans leurs projets immobiliers et la gestion de leurs personnels.
+        - link "06 Urbanisme Autorisations d'urbanisme, opérations d'aménagement et défense de l'environnement." [ref=e61] [cursor=pointer]:
+          - /url: /urbanisme.html
+          - generic [ref=e62]: "06"
+          - heading "Urbanisme" [level=3] [ref=e63]
+          - paragraph [ref=e64]: Autorisations d'urbanisme, opérations d'aménagement et défense de l'environnement.
+        - link "07 Baux commerciaux Rédaction, renouvellement, fixation du loyer et contentieux entre bailleurs et locataires." [ref=e65] [cursor=pointer]:
+          - /url: /baux.html
+          - generic [ref=e66]: "07"
+          - heading "Baux commerciaux" [level=3] [ref=e67]
+          - paragraph [ref=e68]: Rédaction, renouvellement, fixation du loyer et contentieux entre bailleurs et locataires.
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - heading "Le cabinet" [level=2] [ref=e74]
+        - paragraph [ref=e75]: Exclusivement dédié au droit immobilier et au droit public, le cabinet Hélians a développé une expertise approfondie en matière d'expropriation.
+        - paragraph [ref=e76]: Notre clientèle est composée de particuliers, d'entreprises, d'établissements hospitaliers et médico-sociaux, de syndicats de copropriétaires et de propriétaires.
+        - paragraph [ref=e77]: Nous mettons nos compétences au service du conseil, de la négociation et du contentieux. Après une analyse rigoureuse de chaque dossier et un échange approfondi avec notre client, nous apportons systématiquement une réponse personnalisée et concrète.
+        - paragraph [ref=e78]: Le cabinet Hélians privilégie la voie amiable et la médiation. Le recours au contentieux n'est envisagé que lorsqu'il constitue un moyen efficace, rapide et proportionné à l'enjeu du litige.
+        - paragraph [ref=e79]: "Pour les sujets nécessitant des compétences complémentaires, nous mobilisons un réseau éprouvé de confrères et d'experts : notaires, experts techniques ou fonciers, huissiers. Habitués au travail pluridisciplinaire, les membres du cabinet sont régulièrement sollicités par d'autres professionnels du droit dans leurs domaines de spécialité."
+        - link "En savoir plus" [ref=e81] [cursor=pointer]:
+          - /url: /cabinet.html
+      - generic [ref=e83]:
+        - heading "En bref" [level=4] [ref=e84]
+        - list [ref=e85]:
+          - listitem [ref=e86]:
+            - strong [ref=e87]: +30 ans
+            - text: — d'expérience en droit immobilier
+          - listitem [ref=e88]:
+            - strong [ref=e89]: 3 avocats
+            - text: — spécialisés à votre service
+          - listitem [ref=e90]:
+            - strong [ref=e91]: Paris 1er
+            - text: — 7 rue d'Argenteuil
+          - listitem [ref=e92]:
+            - strong [ref=e93]: Conseil & contentieux
+            - text: — approche sur mesure
+  - contentinfo [ref=e94]:
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - img "Hélians" [ref=e99]
+            - generic [ref=e100]: Hélians
+          - paragraph [ref=e101]: Société d'avocats dédiée au droit immobilier et au droit public.
+        - generic [ref=e102]:
+          - heading "Le cabinet" [level=4] [ref=e103]
+          - link "Accueil" [ref=e104] [cursor=pointer]:
+            - /url: /
+          - link "L'équipe" [ref=e105] [cursor=pointer]:
+            - /url: /cabinet.html
+          - link "Blog" [ref=e106] [cursor=pointer]:
+            - /url: /blog.html
+          - link "Contact" [ref=e107] [cursor=pointer]:
+            - /url: /contact.html
+        - generic [ref=e108]:
+          - heading "Expertises" [level=4] [ref=e109]
+          - link "Expropriation — Défense des expropriés" [ref=e110] [cursor=pointer]:
+            - /url: /expropriation.html
+          - link "Préemption" [ref=e111] [cursor=pointer]:
+            - /url: /preemption.html
+          - link "Immobilier" [ref=e112] [cursor=pointer]:
+            - /url: /immobilier.html
+          - link "Construction publique" [ref=e113] [cursor=pointer]:
+            - /url: /construction.html
+          - link "Hôpitaux publics & secteur médico-social" [ref=e114] [cursor=pointer]:
+            - /url: /hopitaux.html
+        - generic [ref=e115]:
+          - heading "Contact" [level=4] [ref=e116]
+          - paragraph [ref=e117]: 7 rue d'Argenteuil, 75001 Paris
+          - link "01.44.01.09.59" [ref=e118] [cursor=pointer]:
+            - /url: tel:0144010959
+      - generic [ref=e119]:
+        - generic [ref=e120]: © 2026 Hélians — Tous droits réservés
+        - link "Mentions légales" [ref=e121] [cursor=pointer]:
+          - /url: /mentions.html

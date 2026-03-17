@@ -1,0 +1,129 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "Hélians Hélians Avocats Conseils" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Hélians" [ref=e6]
+        - generic [ref=e7]:
+          - text: Hélians
+          - generic [ref=e8]: Avocats Conseils
+      - generic [ref=e9]:
+        - link "Accueil" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Le Cabinet" [ref=e11] [cursor=pointer]:
+          - /url: /cabinet.html
+        - generic [ref=e13] [cursor=pointer]: Expertises
+        - link "Blog" [ref=e14] [cursor=pointer]:
+          - /url: /blog.html
+        - link "Contact" [ref=e15] [cursor=pointer]:
+          - /url: /contact.html
+  - generic [ref=e16]:
+    - link "Accueil" [ref=e17] [cursor=pointer]:
+      - /url: /
+    - link "Le Cabinet" [ref=e18] [cursor=pointer]:
+      - /url: /cabinet.html
+    - generic [ref=e19]: Nos expertises
+    - link "Expropriation — Défense des expropriés" [ref=e20] [cursor=pointer]:
+      - /url: /expropriation.html
+    - link "Préemption" [ref=e21] [cursor=pointer]:
+      - /url: /preemption.html
+    - link "Immobilier" [ref=e22] [cursor=pointer]:
+      - /url: /immobilier.html
+    - link "Construction publique" [ref=e23] [cursor=pointer]:
+      - /url: /construction.html
+    - link "Hôpitaux publics & secteur médico-social" [ref=e24] [cursor=pointer]:
+      - /url: /hopitaux.html
+    - link "Urbanisme" [ref=e25] [cursor=pointer]:
+      - /url: /urbanisme.html
+    - link "Baux commerciaux" [ref=e26] [cursor=pointer]:
+      - /url: /baux.html
+    - link "Blog" [ref=e27] [cursor=pointer]:
+      - /url: /blog.html
+    - link "Nous contacter" [ref=e28] [cursor=pointer]:
+      - /url: /contact.html
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - paragraph [ref=e31]: Le cabinet
+      - heading "Le Cabinet" [level=1] [ref=e32]
+      - paragraph [ref=e33]: Exclusivement dédié au droit immobilier et au droit public, le cabinet Hélians a développé une expertise approfondie en matière d'expropriation.
+      - paragraph [ref=e34]: Notre clientèle est composée de particuliers, d'entreprises, d'établissements hospitaliers et médico-sociaux, de syndicats de copropriétaires et de propriétaires.
+      - paragraph [ref=e35]: Nous mettons nos compétences au service du conseil, de la négociation et du contentieux. Après une analyse rigoureuse de chaque dossier et un échange approfondi avec notre client, nous apportons systématiquement une réponse personnalisée et concrète.
+      - paragraph [ref=e36]: Le cabinet Hélians privilégie la voie amiable et la médiation. Le recours au contentieux n'est envisagé que lorsqu'il constitue un moyen efficace, rapide et proportionné à l'enjeu du litige.
+      - paragraph [ref=e37]: "Pour les sujets nécessitant des compétences complémentaires, nous mobilisons un réseau éprouvé de confrères et d'experts : notaires, experts techniques ou fonciers, huissiers. Habitués au travail pluridisciplinaire, les membres du cabinet sont régulièrement sollicités par d'autres professionnels du droit dans leurs domaines de spécialité."
+      - heading "L'équipe" [level=2] [ref=e39]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - img "Gilles CAILLET" [ref=e42]
+          - heading "Gilles CAILLET" [level=3] [ref=e43]
+          - paragraph [ref=e44]: Avocat gérant
+          - paragraph [ref=e45]: Avocat depuis 1995, Gilles Caillet consacre sa pratique au droit immobilier et au droit public. Il a acquis une expertise reconnue en droit de l'expropriation, domaine dans lequel il intervient depuis plus de vingt ans.
+          - paragraph [ref=e46]: "Ancien chargé d'enseignement à l'Université d'Angers et à l'INSET d'Angers (formation des attachés et ingénieurs territoriaux), il anime régulièrement des sessions de formation auprès de professionnels de l'immobilier et de la construction : juristes d'entreprises du bâtiment, agents immobiliers et experts."
+          - list [ref=e47]:
+            - listitem [ref=e48]: Inscrit au barreau d'Angers en 1995, puis au barreau de Paris en 2004
+            - listitem [ref=e49]: CAPA — École du Centre-Ouest des Avocats (Poitiers)
+            - listitem [ref=e50]: DESS Droit de la construction — Université de Poitiers
+            - listitem [ref=e51]: Maîtrise de droit public — Université d'Angers
+        - generic [ref=e52]:
+          - img "Xavier VIDALIE" [ref=e53]
+          - heading "Xavier VIDALIE" [level=3] [ref=e54]
+          - paragraph [ref=e55]: Avocat collaborateur
+          - list [ref=e56]:
+            - listitem [ref=e57]: CAPA — École de formation du barreau de la Cour d'appel de Paris (EFB)
+            - listitem [ref=e58]: Master II Droit public général — Université Paris Descartes
+            - listitem [ref=e59]: Master II Droit immobilier public — ESSYM / Université de Versailles Saint-Quentin-en-Yvelines
+        - generic [ref=e60]:
+          - img "Noémie PAJOT" [ref=e61]
+          - heading "Noémie PAJOT" [level=3] [ref=e62]
+          - paragraph [ref=e63]: Juriste
+          - list [ref=e64]:
+            - listitem [ref=e65]: Master II Droit immobilier public — ESSYM / Université de Versailles Saint-Quentin-en-Yvelines
+      - heading "Notre approche" [level=2] [ref=e67]
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - heading "Conseil personnalisé" [level=4] [ref=e70]
+          - paragraph [ref=e71]: Après une analyse approfondie de chaque dossier, nous élaborons une stratégie adaptée à votre situation spécifique.
+        - generic [ref=e72]:
+          - heading "Dialogue privilégié" [level=4] [ref=e73]
+          - paragraph [ref=e74]: Nous privilégions la discussion amiable et la médiation. Le contentieux n'intervient que lorsqu'il constitue la voie la plus efficace.
+        - generic [ref=e75]:
+          - heading "Réseau d'experts" [level=4] [ref=e76]
+          - paragraph [ref=e77]: Nous collaborons avec un réseau de confrères et d'experts (notaires, experts techniques, huissiers) pour une approche pluridisciplinaire.
+  - contentinfo [ref=e78]:
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - img "Hélians" [ref=e83]
+            - generic [ref=e84]: Hélians
+          - paragraph [ref=e85]: Société d'avocats dédiée au droit immobilier et au droit public.
+        - generic [ref=e86]:
+          - heading "Le cabinet" [level=4] [ref=e87]
+          - link "Accueil" [ref=e88] [cursor=pointer]:
+            - /url: /
+          - link "L'équipe" [ref=e89] [cursor=pointer]:
+            - /url: /cabinet.html
+          - link "Blog" [ref=e90] [cursor=pointer]:
+            - /url: /blog.html
+          - link "Contact" [ref=e91] [cursor=pointer]:
+            - /url: /contact.html
+        - generic [ref=e92]:
+          - heading "Expertises" [level=4] [ref=e93]
+          - link "Expropriation — Défense des expropriés" [ref=e94] [cursor=pointer]:
+            - /url: /expropriation.html
+          - link "Préemption" [ref=e95] [cursor=pointer]:
+            - /url: /preemption.html
+          - link "Immobilier" [ref=e96] [cursor=pointer]:
+            - /url: /immobilier.html
+          - link "Construction publique" [ref=e97] [cursor=pointer]:
+            - /url: /construction.html
+          - link "Hôpitaux publics & secteur médico-social" [ref=e98] [cursor=pointer]:
+            - /url: /hopitaux.html
+        - generic [ref=e99]:
+          - heading "Contact" [level=4] [ref=e100]
+          - paragraph [ref=e101]: 7 rue d'Argenteuil, 75001 Paris
+          - link "01.44.01.09.59" [ref=e102] [cursor=pointer]:
+            - /url: tel:0144010959
+      - generic [ref=e103]:
+        - generic [ref=e104]: © 2026 Hélians — Tous droits réservés
+        - link "Mentions légales" [ref=e105] [cursor=pointer]:
+          - /url: /mentions.html

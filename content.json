@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "nom": "Hélians - Société d'avocats",
+    "forme_juridique": "SELARL au capital de 100.000 €",
+    "rcs": "PARIS 502 708 530",
+    "adresse": "7 rue d'Argenteuil, 75001 Paris",
+    "telephone": "01.44.01.09.59",
+    "email": "",
+    "metros": [
+      { "lignes": "1/7", "station": "Palais Royal / Musée du Louvre" },
+      { "lignes": "7/14", "station": "Pyramides" }
+    ],
+    "parkings": ["Pyramides", "Musée du Louvre", "St Honoré"]
+  },
+  "accueil": {
+    "hero": {
+      "titre": "Cabinet d'avocats dédié au droit immobilier et au droit public",
+      "sousTitre": "Une expertise reconnue en droit de l'expropriation",
+      "description": "Hélians est une société d'avocats exclusivement consacrée à l'immobilier et au droit public, avec un savoir-faire particulier en matière d'expropriation."
+    },
+    "expertises": [
+      {
+        "titre": "Expropriation",
+        "description": "Défense des expropriés, négociation des indemnités et accompagnement à chaque étape de la procédure.",
+        "lien": "expropriation"
+      },
+      {
+        "titre": "Préemption",
+        "description": "Contestation des décisions de préemption, purge du droit de préemption et fixation du prix.",
+        "lien": "preemption"
+      },
+      {
+        "titre": "Immobilier",
+        "description": "Conseil et contentieux à toutes les étapes de la vie d'un immeuble : vente, construction, copropriété, baux.",
+        "lien": "immobilier"
+      },
+      {
+        "titre": "Construction publique",
+        "description": "Marchés publics de travaux, suivi de chantier, expertises judiciaires et litiges de construction.",
+        "lien": "construction"
+      },
+      {
+        "titre": "Hôpitaux & secteur médico-social",
+        "description": "Accompagnement juridique des établissements de santé dans leurs projets immobiliers et la gestion de leurs personnels.",
+        "lien": "hopitaux"
+      },
+      {
+        "titre": "Urbanisme",
+        "description": "Autorisations d'urbanisme, opérations d'aménagement et défense de l'environnement.",
+        "lien": "urbanisme"
+      },
+      {
+        "titre": "Baux commerciaux",
+        "description": "Rédaction, renouvellement, fixation du loyer et contentieux entre bailleurs et locataires.",
+        "lien": "baux"
+      }
+    ]
+  },
+  "cabinet": {
+    "titre": "Le Cabinet",
+    "description": [
+      "Exclusivement dédié au droit immobilier et au droit public, le cabinet Hélians a développé une expertise approfondie en matière d'expropriation.",
+      "Notre clientèle est composée de particuliers, d'entreprises, d'établissements hospitaliers et médico-sociaux, de syndicats de copropriétaires et de propriétaires.",
+      "Nous mettons nos compétences au service du conseil, de la négociation et du contentieux. Après une analyse rigoureuse de chaque dossier et un échange approfondi avec notre client, nous apportons systématiquement une réponse personnalisée et concrète.",
+      "Le cabinet Hélians privilégie la voie amiable et la médiation. Le recours au contentieux n'est envisagé que lorsqu'il constitue un moyen efficace, rapide et proportionné à l'enjeu du litige.",
+      "Pour les sujets nécessitant des compétences complémentaires, nous mobilisons un réseau éprouvé de confrères et d'experts : notaires, experts techniques ou fonciers, huissiers. Habitués au travail pluridisciplinaire, les membres du cabinet sont régulièrement sollicités par d'autres professionnels du droit dans leurs domaines de spécialité."
+    ],
+    "equipe": {
+      "titre": "L'équipe",
+      "membres": [
+        {
+          "nom": "Gilles CAILLET",
+          "role": "Avocat gérant",
+          "photo": "",
+          "formations": [
+            "Inscrit au barreau d'Angers en 1995, puis au barreau de Paris en 2004",
+            "CAPA — École du Centre-Ouest des Avocats (Poitiers)",
+            "DESS Droit de la construction — Université de Poitiers",
+            "Maîtrise de droit public — Université d'Angers"
+          ],
+          "biographie": [
+            "Avocat depuis 1995, Gilles Caillet consacre sa pratique au droit immobilier et au droit public. Il a acquis une expertise reconnue en droit de l'expropriation, domaine dans lequel il intervient depuis plus de vingt ans.",
+            "Ancien chargé d'enseignement à l'Université d'Angers et à l'INSET d'Angers (formation des attachés et ingénieurs territoriaux), il anime régulièrement des sessions de formation auprès de professionnels de l'immobilier et de la construction : juristes d'entreprises du bâtiment, agents immobiliers et experts."
+          ]
+        },
+        {
+          "nom": "Xavier VIDALIE",
+          "role": "Avocat collaborateur",
+          "photo": "",
+          "formations": [
+            "CAPA — École de formation du barreau de la Cour d'appel de Paris (EFB)",
+            "Master II Droit public général — Université Paris Descartes",
+            "Master II Droit immobilier public — ESSYM / Université de Versailles Saint-Quentin-en-Yvelines"
+          ],
+          "biographie": []
+        },
+        {
+          "nom": "Noémie PAJOT",
+          "role": "Juriste",
+          "photo": "",
+          "formations": [
+            "Master II Droit immobilier public — ESSYM / Université de Versailles Saint-Quentin-en-Yvelines"
+          ],
+          "biographie": []
+        }
+      ]
+    }
+  },
+  "expropriation": {
+    "titre": "Expropriation — Défense des expropriés",
+    "introduction": [
+      "Faire l'objet d'une procédure d'expropriation est une épreuve qui bouleverse un projet de vie ou d'entreprise. Il est essentiel de se faire accompagner le plus tôt possible par un avocat expérimenté.",
+      "L'assistance d'un avocat permet aux personnes et sociétés concernées d'être défendues à chaque étape de la procédure, tant devant la juridiction de l'expropriation que face aux administrations compétentes.",
+      "Les conseils d'un avocat spécialisé donnent accès aux subtilités de la procédure et, surtout, permettent de déterminer au plus juste le montant de l'indemnité à laquelle vous pouvez prétendre."
+    ],
+    "expertise": [
+      "Depuis plus de vingt ans, Gilles Caillet conseille et défend des particuliers et des entreprises confrontés à l'expropriation, notamment dans le cadre du Grand Paris Express.",
+      "Il a constitué une équipe d'avocats spécialisés dans ce domaine.",
+      "Le cabinet Hélians défend également les propriétaires et commerçants riverains des opérations d'expropriation : expertise préventive, dommages de chantier et pertes d'exploitation."
+    ],
+    "domaines": [
+      "Procédure en constatation du défaut de base légale de l'ordonnance de transfert de propriété",
+      "Droit de rétrocession"
+    ],
+    "references": {
+      "titre": "Références — Dossiers en cours",
+      "dossiers": [
+        "Négociation pour des particuliers et des entreprises propriétaires concernés par des expropriations totales (maisons, appartements, locaux commerciaux) ou en tréfonds dans le cadre du Grand Paris Express (Société du Grand Paris — lignes 15, 16 et 17)",
+        "Assistance de syndicats de copropriétaires et de propriétaires d'immeubles visés par la procédure d'expropriation liée au prolongement de la ligne de tramway T1 (Hauts-de-Seine)",
+        "Assistance d'une entreprise pour négocier les indemnités liées au déménagement de son activité expropriée (Oise)",
+        "Négociation des indemnités dues en contrepartie de l'expropriation de fonds de commerce (Seine-et-Marne)"
+      ]
+    }
+  },
+  "preemption": {
+    "titre": "Préemption",
+    "introduction": [
+      "En matière immobilière, le droit de préemption permet à une personne publique ou privée d'acquérir en priorité un bien immobilier lorsque son propriétaire manifeste son intention de le vendre.",
+      "Ce droit peut s'exercer sur tout type de bien : maison individuelle, appartement en copropriété, parcelle agricole, local commercial, terrain nu.",
+      "Son exercice remet directement en cause le projet de vente convenu entre le vendeur et l'acquéreur, puisque le titulaire du droit de préemption a la faculté de se substituer à l'acheteur initialement retenu.",
+      "Depuis plus de vingt ans, Gilles Caillet et son équipe ont acquis une expertise reconnue en matière de droit de préemption."
+    ],
+    "competences": [
+      "Purge du droit de préemption par une notification efficace",
+      "Accompagnement du processus de préemption",
+      "Recours contre les préemptions illégales",
+      "Action en indemnisation ou en annulation de la vente réalisée au détriment du titulaire du droit de préemption"
+    ],
+    "types": [
+      "Droit de préemption urbain (DPU)",
+      "Espaces naturels sensibles",
+      "Droit de préemption du locataire",
+      "Droit de préemption de l'indivisaire",
+      "SAFER et code rural",
+      "Délégataire EPCI"
+    ],
+    "references": {
+      "titre": "Références",
+      "dossiers": [
+        "Neutralisation d'une tentative de préemption par une commune sur un immeuble situé en centre-ville (Val-de-Marne)",
+        "Recours en annulation contre une décision de préemption d'un pavillon avec garage, pour le compte du bénéficiaire de la promesse de vente (TA Amiens)",
+        "Négociation avec un organisme HLM délégataire du droit de préemption pour le propriétaire d'un immeuble locatif préempté (Seine-et-Marne)",
+        "Recours contentieux contre la décision de préemption d'un terrain nu (TA Melun)",
+        "Assistance d'un propriétaire dans la procédure de fixation du prix de préemption"
+      ]
+    }
+  },
+  "immobilier": {
+    "titre": "Immobilier",
+    "introduction": "L'immobilier est le cœur de métier du cabinet Hélians. Nous conseillons et défendons nos clients à chaque étape de la vie d'un immeuble.",
+    "domaines": [
+      {
+        "titre": "Ventes immobilières",
+        "description": "Contentieux de la vente et responsabilité des intermédiaires : agents immobiliers, diagnostiqueurs, notaires."
+      },
+      {
+        "titre": "Construction",
+        "description": "Désordres de construction, actions en responsabilité, marchés privés de travaux."
+      },
+      {
+        "titre": "Baux",
+        "description": "Baux commerciaux, baux civils, baux d'habitation : négociation, rédaction et litiges d'exécution."
+      },
+      {
+        "titre": "Copropriété",
+        "description": "Conseil et contentieux en matière de copropriété."
+      },
+      {
+        "titre": "Propriété, servitudes et voisinage",
+        "description": "Droit de propriété, servitudes et troubles de voisinage."
+      },
+      {
+        "titre": "Environnement",
+        "description": "Installations classées et pollution."
+      },
+      {
+        "titre": "Urbanisme",
+        "description": "Autorisations d'urbanisme et opérations d'aménagement."
+      }
+    ]
+  },
+  "construction": {
+    "titre": "Construction publique",
+    "introduction": "Le cabinet Hélians a développé des compétences particulièrement pointues en droit de la construction publique.",
+    "prestations": [
+      {
+        "titre": "Rédaction des marchés",
+        "description": "Nous assistons nos clients dans la rédaction de tous types de marchés publics de travaux et de contrats relatifs à une opération de construction publique."
+      },
+      {
+        "titre": "Suivi de chantier",
+        "description": "Nous intervenons pour traiter toute difficulté survenant en cours de chantier : situations conflictuelles, retards, non-conformités et malfaçons."
+      },
+      {
+        "titre": "Expertises judiciaires",
+        "description": "Nous disposons d'une solide expérience des expertises judiciaires et des litiges relatifs à des désordres de construction."
+      },
+      {
+        "titre": "Évaluation financière",
+        "description": "Nous accompagnons nos clients dans tout litige lié à l'évaluation financière des marchés de travaux : décompte général définitif (DGD) et décomptes intermédiaires."
+      },
+      {
+        "titre": "Contentieux",
+        "description": "Nous gérons les contentieux, souvent longs et complexes, tant devant les juridictions administratives (référés, plein contentieux) que dans leurs implications devant les juridictions judiciaires (sous-traitance et assurances construction)."
+      },
+      {
+        "titre": "Défense de vos intérêts",
+        "description": "Nous défendons les intérêts de nos clients avant ceux de leur assureur."
+      }
+    ]
+  },
+  "hopitaux": {
+    "titre": "Hôpitaux publics & secteur médico-social",
+    "introduction": "Le cabinet Hélians conseille des acteurs publics et reconnus d'utilité publique du secteur sanitaire et social.",
+    "prestations": [
+      "Nous accompagnons plusieurs établissements hospitaliers — centres hospitaliers, EHPAD, établissements médico-sociaux — dans la gestion de leurs projets immobiliers, de leur personnel (fonction publique hospitalière, agents contractuels) et de leurs contrats, et assurons leur défense en justice.",
+      "Nous assistons également des établissements accueillant des personnes en situation de handicap pour les problématiques immobilières auxquelles ils font face.",
+      "Notre connaissance approfondie du domaine hospitalier et du secteur médico-social nous permet de traiter des sujets souvent complexes, situés à la confluence du droit public et du droit privé."
+    ]
+  },
+  "urbanisme": {
+    "titre": "Urbanisme",
+    "introduction": "En matière d'urbanisme et d'aménagement, nous apportons à nos clients et aux collectivités territoriales notre maîtrise du fonctionnement des administrations et de la réglementation environnementale.",
+    "prestations": [
+      {
+        "titre": "Accompagnement de projets",
+        "description": "Accompagnement des porteurs de projets, promoteurs et particuliers dans l'obtention et la sécurisation de leurs autorisations d'urbanisme."
+      },
+      {
+        "titre": "Représentation en justice",
+        "description": "Représentation des promoteurs et des particuliers devant les juridictions administratives."
+      },
+      {
+        "titre": "Environnement",
+        "description": "Conseil aux associations de protection de l'environnement."
+      }
+    ]
+  },
+  "baux": {
+    "titre": "Baux commerciaux",
+    "introduction": "Gilles Caillet et son équipe accompagnent propriétaires et locataires aux moments clés de la vie du bail commercial.",
+    "prestations": [
+      "Rédaction de baux commerciaux sur mesure",
+      "Délivrance des congés avec ou sans offre de renouvellement, ainsi que des demandes de renouvellement",
+      "Négociation des conditions du bail et fixation amiable ou judiciaire du loyer du bail renouvelé",
+      "Rédaction d'actes de renouvellement et d'avenants",
+      "Suivi des contentieux entre bailleur et locataire",
+      "Négociation amiable et rédaction de protocoles d'accord ou d'avenants",
+      "Défense des parties devant les juridictions judiciaires et commerciales",
+      "Négociation et défense des commerçants et entreprises expropriés ou impactés par un chantier de travaux publics"
+    ]
+  },
+  "contact": {
+    "titre": "Contact",
+    "adresse": "7 rue d'Argenteuil, 75001 Paris",
+    "telephone": "01.44.01.09.59",
+    "acces": {
+      "metros": [
+        { "lignes": "Lignes 1/7", "station": "Palais Royal / Musée du Louvre" },
+        { "lignes": "Lignes 7/14", "station": "Pyramides" }
+      ],
+      "parkings": ["Pyramides", "Musée du Louvre", "St Honoré"]
+    },
+    "formulaire": {
+      "champs": [
+        { "nom": "civilite", "label": "Civilité", "type": "select", "options": ["Madame", "Monsieur"] },
+        { "nom": "prenom", "label": "Prénom", "type": "text", "requis": true },
+        { "nom": "nom", "label": "Nom", "type": "text", "requis": true },
+        { "nom": "telephone", "label": "Téléphone", "type": "tel", "requis": false },
+        { "nom": "email", "label": "Email", "type": "email", "requis": true },
+        { "nom": "message", "label": "Message", "type": "textarea", "requis": true }
+      ]
+    }
+  },
+  "mentions": {
+    "titre": "Mentions légales",
+    "contenu": [
+      {
+        "titre": "Éditeur du site",
+        "texte": "Hélians, SELARL au capital de 100.000 €, immatriculée au RCS de Paris sous le numéro 502 708 530. Siège social : 7 rue d'Argenteuil, 75001 Paris. Téléphone : 01.44.01.09.59."
+      }
+    ]
+  },
+  "blog": {
+    "articles": []
+  }
+}

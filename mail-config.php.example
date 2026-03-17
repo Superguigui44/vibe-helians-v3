@@ -1,0 +1,11 @@
+<?php
+// SMTP Configuration for Hélians contact form
+// Copy this file to the server at ~/domains/{domain}/mail-config.php
+
+define('SMTP_HOST', 'smtp.hostinger.com');
+define('SMTP_PORT', 465);
+define('SMTP_USER', 'contact@helians.fr');
+define('SMTP_PASS', 'your-password-here');
+define('SMTP_FROM', 'contact@helians.fr');
+define('SMTP_FROM_NAME', 'Hélians Avocats');
+define('SMTP_TO', 'contact@helians.fr');

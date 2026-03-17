@@ -1,0 +1,141 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "Hélians Hélians Avocats Conseils" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Hélians" [ref=e6]
+        - generic [ref=e7]:
+          - text: Hélians
+          - generic [ref=e8]: Avocats Conseils
+      - generic [ref=e9]:
+        - link "Accueil" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Le Cabinet" [ref=e11] [cursor=pointer]:
+          - /url: /cabinet.html
+        - generic [ref=e13] [cursor=pointer]: Expertises
+        - link "Blog" [ref=e14] [cursor=pointer]:
+          - /url: /blog.html
+        - link "Contact" [ref=e15] [cursor=pointer]:
+          - /url: /contact.html
+  - generic [ref=e16]:
+    - link "Accueil" [ref=e17] [cursor=pointer]:
+      - /url: /
+    - link "Le Cabinet" [ref=e18] [cursor=pointer]:
+      - /url: /cabinet.html
+    - generic [ref=e19]: Nos expertises
+    - link "Expropriation — Défense des expropriés" [ref=e20] [cursor=pointer]:
+      - /url: /expropriation.html
+    - link "Préemption" [ref=e21] [cursor=pointer]:
+      - /url: /preemption.html
+    - link "Immobilier" [ref=e22] [cursor=pointer]:
+      - /url: /immobilier.html
+    - link "Construction publique" [ref=e23] [cursor=pointer]:
+      - /url: /construction.html
+    - link "Hôpitaux publics & secteur médico-social" [ref=e24] [cursor=pointer]:
+      - /url: /hopitaux.html
+    - link "Urbanisme" [ref=e25] [cursor=pointer]:
+      - /url: /urbanisme.html
+    - link "Baux commerciaux" [ref=e26] [cursor=pointer]:
+      - /url: /baux.html
+    - link "Blog" [ref=e27] [cursor=pointer]:
+      - /url: /blog.html
+    - link "Nous contacter" [ref=e28] [cursor=pointer]:
+      - /url: /contact.html
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - paragraph [ref=e31]: Contact
+      - heading "Contact" [level=1] [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - paragraph [ref=e36]: Adresse
+            - paragraph [ref=e37]: 7 rue d'Argenteuil, 75001 Paris
+          - generic [ref=e38]:
+            - paragraph [ref=e39]: Téléphone
+            - paragraph [ref=e40]:
+              - link "01.44.01.09.59" [ref=e41] [cursor=pointer]:
+                - /url: tel:0144010959
+          - generic [ref=e42]:
+            - paragraph [ref=e43]: Accès métro
+            - paragraph [ref=e44]:
+              - text: "Lignes 1/7 : Palais Royal / Musée du Louvre"
+              - text: "Lignes 7/14 : Pyramides"
+          - generic [ref=e45]:
+            - paragraph [ref=e46]: Parkings à proximité
+            - paragraph [ref=e47]: Pyramides, Musée du Louvre, St Honoré
+          - iframe [ref=e49]:
+            
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]: Prénom *
+              - textbox "Prénom *" [ref=e55]
+            - generic [ref=e56]:
+              - generic [ref=e57]: Nom *
+              - textbox "Nom *" [ref=e58]
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - generic [ref=e61]: Email *
+              - textbox "Email *" [ref=e62]
+            - generic [ref=e63]:
+              - generic [ref=e64]: Téléphone *
+              - textbox "Téléphone *" [ref=e65]
+          - generic [ref=e66]:
+            - generic [ref=e67]: Objet
+            - combobox "Objet" [ref=e68]:
+              - option "Sélectionnez un domaine" [selected]
+              - option "Expropriation — Défense des expropriés"
+              - option "Préemption"
+              - option "Immobilier"
+              - option "Construction publique"
+              - option "Hôpitaux publics & secteur médico-social"
+              - option "Urbanisme"
+              - option "Baux commerciaux"
+              - option "Autre"
+          - generic [ref=e69]:
+            - generic [ref=e70]: Message *
+            - textbox "Message *" [ref=e71]:
+              - /placeholder: Décrivez brièvement votre situation...
+          - generic [ref=e72]:
+            - text: Website
+            - textbox [ref=e73]
+          - button "Envoyer le message" [ref=e74] [cursor=pointer]
+  - contentinfo [ref=e75]:
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - img "Hélians" [ref=e80]
+            - generic [ref=e81]: Hélians
+          - paragraph [ref=e82]: Société d'avocats dédiée au droit immobilier et au droit public.
+        - generic [ref=e83]:
+          - heading "Le cabinet" [level=4] [ref=e84]
+          - link "Accueil" [ref=e85] [cursor=pointer]:
+            - /url: /
+          - link "L'équipe" [ref=e86] [cursor=pointer]:
+            - /url: /cabinet.html
+          - link "Blog" [ref=e87] [cursor=pointer]:
+            - /url: /blog.html
+          - link "Contact" [ref=e88] [cursor=pointer]:
+            - /url: /contact.html
+        - generic [ref=e89]:
+          - heading "Expertises" [level=4] [ref=e90]
+          - link "Expropriation — Défense des expropriés" [ref=e91] [cursor=pointer]:
+            - /url: /expropriation.html
+          - link "Préemption" [ref=e92] [cursor=pointer]:
+            - /url: /preemption.html
+          - link "Immobilier" [ref=e93] [cursor=pointer]:
+            - /url: /immobilier.html
+          - link "Construction publique" [ref=e94] [cursor=pointer]:
+            - /url: /construction.html
+          - link "Hôpitaux publics & secteur médico-social" [ref=e95] [cursor=pointer]:
+            - /url: /hopitaux.html
+        - generic [ref=e96]:
+          - heading "Contact" [level=4] [ref=e97]
+          - paragraph [ref=e98]: 7 rue d'Argenteuil, 75001 Paris
+          - link "01.44.01.09.59" [ref=e99] [cursor=pointer]:
+            - /url: tel:0144010959
+      - generic [ref=e100]:
+        - generic [ref=e101]: © 2026 Hélians — Tous droits réservés
+        - link "Mentions légales" [ref=e102] [cursor=pointer]:
+          - /url: /mentions.html

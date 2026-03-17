@@ -1,0 +1,203 @@
+<?php
+/**
+ * Admin Configuration — place this file OUTSIDE webroot.
+ * On Hostinger: ~/domains/{domain}/admin-config.php
+ * Locally: project-root/admin-config.php (one level above public/)
+ */
+return [
+    // Site name displayed in admin header
+    'site_name' => 'Hélians - Société d\'avocats',
+
+    // Path to users file (outside webroot)
+    'users_file' => __DIR__ . '/admin-users.json',
+
+    // Path to content.json (outside webroot)
+    'content_file' => __DIR__ . '/content.json',
+
+    // Path to mail-config.php (for password reset emails)
+    'mail_config' => __DIR__ . '/mail-config.php',
+
+    // Path to PHPMailer autoload
+    'vendor_autoload' => __DIR__ . '/public_html/vendor/autoload.php',
+
+    // Image upload settings
+    'upload_dir' => __DIR__ . '/public_html/images',
+    'upload_url' => '/images',
+    'max_upload_size' => 5 * 1024 * 1024, // 5 MB
+
+    // Password reset sender name
+    'reset_from_name' => 'Hélians',
+
+    // Content sections — defines which fields are editable per page section
+    'sections' => [
+        'accueil' => [
+            'label' => 'Accueil',
+            'fields' => [
+                'hero.titre' => ['type' => 'text', 'label' => 'Titre hero'],
+                'hero.sousTitre' => ['type' => 'text', 'label' => 'Sous-titre hero'],
+                'hero.description' => ['type' => 'textarea', 'label' => 'Description hero'],
+            ],
+        ],
+        'accueil_expertises' => [
+            'label' => 'Accueil — Expertises',
+            'type' => 'array',
+            'content_key' => 'accueil.expertises',
+            'item_label_field' => 'titre',
+            'item_fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'description' => ['type' => 'textarea', 'label' => 'Description'],
+                'lien' => ['type' => 'text', 'label' => 'Lien (slug de la page expertise)'],
+            ],
+        ],
+        'cabinet' => [
+            'label' => 'Le Cabinet',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'description' => ['type' => 'richtext', 'label' => 'Description du cabinet'],
+            ],
+        ],
+        'cabinet_equipe' => [
+            'label' => 'Le Cabinet — Équipe',
+            'type' => 'array',
+            'content_key' => 'cabinet.equipe.membres',
+            'item_label_field' => 'nom',
+            'item_fields' => [
+                'nom' => ['type' => 'text', 'label' => 'Nom'],
+                'role' => ['type' => 'text', 'label' => 'Rôle'],
+                'photo' => ['type' => 'image', 'label' => 'Photo'],
+            ],
+        ],
+        'expropriation' => [
+            'label' => 'Expropriation',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'introduction' => ['type' => 'richtext', 'label' => 'Introduction'],
+                'references.titre' => ['type' => 'text', 'label' => 'Titre des références'],
+            ],
+        ],
+        'expropriation_dossiers' => [
+            'label' => 'Expropriation — Dossiers',
+            'type' => 'array',
+            'content_key' => 'expropriation.references.dossiers',
+            'item_label_field' => 'text',
+            'item_fields' => [
+                'text' => ['type' => 'textarea', 'label' => 'Description du dossier'],
+            ],
+        ],
+        'preemption' => [
+            'label' => 'Préemption',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'introduction' => ['type' => 'richtext', 'label' => 'Introduction'],
+                'references.titre' => ['type' => 'text', 'label' => 'Titre des références'],
+            ],
+        ],
+        'preemption_dossiers' => [
+            'label' => 'Préemption — Dossiers',
+            'type' => 'array',
+            'content_key' => 'preemption.references.dossiers',
+            'item_label_field' => 'text',
+            'item_fields' => [
+                'text' => ['type' => 'textarea', 'label' => 'Description du dossier'],
+            ],
+        ],
+        'immobilier' => [
+            'label' => 'Immobilier',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'introduction' => ['type' => 'textarea', 'label' => 'Introduction'],
+            ],
+        ],
+        'immobilier_domaines' => [
+            'label' => 'Immobilier — Domaines',
+            'type' => 'array',
+            'content_key' => 'immobilier.domaines',
+            'item_label_field' => 'titre',
+            'item_fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre du domaine'],
+                'description' => ['type' => 'textarea', 'label' => 'Description'],
+            ],
+        ],
+        'construction' => [
+            'label' => 'Construction',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'introduction' => ['type' => 'textarea', 'label' => 'Introduction'],
+            ],
+        ],
+        'construction_prestations' => [
+            'label' => 'Construction — Prestations',
+            'type' => 'array',
+            'content_key' => 'construction.prestations',
+            'item_label_field' => 'titre',
+            'item_fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre de la prestation'],
+                'description' => ['type' => 'textarea', 'label' => 'Description'],
+            ],
+        ],
+        'hopitaux' => [
+            'label' => 'Hôpitaux',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'introduction' => ['type' => 'textarea', 'label' => 'Introduction'],
+                'prestations' => ['type' => 'richtext', 'label' => 'Prestations'],
+            ],
+        ],
+        'urbanisme' => [
+            'label' => 'Urbanisme',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'introduction' => ['type' => 'textarea', 'label' => 'Introduction'],
+            ],
+        ],
+        'urbanisme_prestations' => [
+            'label' => 'Urbanisme — Prestations',
+            'type' => 'array',
+            'content_key' => 'urbanisme.prestations',
+            'item_label_field' => 'titre',
+            'item_fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre de la prestation'],
+                'description' => ['type' => 'textarea', 'label' => 'Description'],
+            ],
+        ],
+        'baux' => [
+            'label' => 'Baux',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'introduction' => ['type' => 'textarea', 'label' => 'Introduction'],
+                'prestations' => ['type' => 'richtext', 'label' => 'Prestations'],
+            ],
+        ],
+        'contact' => [
+            'label' => 'Contact',
+            'fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre'],
+                'adresse' => ['type' => 'text', 'label' => 'Adresse'],
+                'telephone' => ['type' => 'text', 'label' => 'Téléphone'],
+            ],
+        ],
+        'mentions' => [
+            'label' => 'Mentions légales',
+            'type' => 'array',
+            'content_key' => 'mentions.contenu',
+            'item_label_field' => 'titre',
+            'item_fields' => [
+                'titre' => ['type' => 'text', 'label' => 'Titre de la section'],
+                'texte' => ['type' => 'richtext', 'label' => 'Contenu'],
+            ],
+        ],
+    ],
+
+    // Blog configuration
+    'blog' => [
+        'enabled' => true,
+        'fields' => [
+            'title' => ['type' => 'text', 'label' => 'Titre', 'required' => true],
+            'description' => ['type' => 'textarea', 'label' => 'Description', 'required' => true],
+            'date' => ['type' => 'date', 'label' => 'Date de publication'],
+            'image' => ['type' => 'image', 'label' => 'Image de couverture'],
+            'tags' => ['type' => 'tags', 'label' => 'Tags'],
+            'content' => ['type' => 'richtext', 'label' => 'Contenu'],
+        ],
+    ],
+];

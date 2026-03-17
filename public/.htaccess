@@ -1,0 +1,20 @@
+# Redirections 301 — ancien site helians.fr → nouveau site
+# À mettre à jour lors de la migration des articles de blog (URLs individuelles)
+
+# Pages principales
+Redirect 301 /avocat-expropriation-preemption-r3200.html /expropriation.html
+Redirect 301 /avocat-preemption-r25177.html /preemption.html
+Redirect 301 /avocat-immobilier-r23645.html /immobilier.html
+Redirect 301 /avocat-construction-publique-r22494.html /construction.html
+Redirect 301 /hopitaux-publics-hospitalier-medico-social-avocat-r22495.html /hopitaux.html
+Redirect 301 /urbanisme-amenagement-avocat-r22493.html /urbanisme.html
+Redirect 301 /bail-commercial-baux-commerciaux-avocat-r22496.html /baux.html
+Redirect 301 /helians-avocats-gilles-caillet-expropriation-avocat-r20248.html /cabinet.html
+Redirect 301 /contact-avocat-expropriation-r17741.html /contact.html
+
+# Blog — index
+Redirect 301 /actualite-juridique-blog-expropriation-r23328.html /blog.html
+
+# Blog — articles individuels (catch-all temporaire → /blog.html)
+# TODO: remplacer par des redirections 1:1 après migration des articles
+RedirectMatch 301 ^/actualite-juridique-blog-expropriation/.* /blog.html

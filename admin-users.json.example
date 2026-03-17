@@ -1,0 +1,6 @@
+{
+    "admin@example.com": {
+        "hash": "$2y$10$PLACEHOLDER_HASH_REPLACE_WITH_REAL_BCRYPT_HASH",
+        "name": "Administrateur"
+    }
+}
