@@ -46,16 +46,32 @@ async function init() {
   if (page === 'blog') initBlogCards(data)
 }
 
+// --- Base path for maquette mode (e.g., /m/helians-v3/) ---
+const BASE = document.querySelector('base')?.getAttribute('href')?.replace(/\/$/, '')
+  || window.location.pathname.replace(/\/[^/]*\.html$/, '').replace(/\/$/, '') || ''
+
+// Prefix internal links with BASE (noop when deployed at root)
+function link(path) {
+  if (!path || path.startsWith('http') || path.startsWith('#') || path.startsWith('mailto:')) return path
+  if (path === '/') return BASE + '/index.html'
+  return BASE + (path.startsWith('/') ? path : '/' + path)
+}
+
 // --- Fetch content ---
+
 async function fetchContent() {
-  try {
-    const res = await fetch('/content.php')
-    if (res.ok) return await res.json()
-  } catch (e) { /* fallback */ }
-  try {
-    const res = await fetch('/content.json')
-    if (res.ok) return await res.json()
-  } catch (e) { /* silent */ }
+  const paths = [
+    '/content.php',
+    '/content.json',
+    `${BASE}/content.json`,
+    'content.json',
+  ]
+  for (const path of paths) {
+    try {
+      const res = await fetch(path)
+      if (res.ok) return await res.json()
+    } catch (e) { /* try next */ }
+  }
   return null
 }
 
@@ -71,7 +87,7 @@ function renderNav(data, currentPage) {
   return `
   <nav class="nav" id="navbar">
     <div class="nav__inner">
-      <a href="/" class="nav__logo">
+      <a href="${link('/')}" class="nav__logo">
         <img src="/images/logo.jpg" alt="Hélians" />
         <div>
           <span class="nav__logo-text">Hélians</span>
@@ -79,16 +95,16 @@ function renderNav(data, currentPage) {
         </div>
       </a>
       <div class="nav__links">
-        <a href="/" class="nav__link ${currentPage === 'accueil' ? 'active' : ''}">Accueil</a>
-        <a href="/cabinet.html" class="nav__link ${currentPage === 'cabinet' ? 'active' : ''}">Le Cabinet</a>
+        <a href="${link('/')}" class="nav__link ${currentPage === 'accueil' ? 'active' : ''}">Accueil</a>
+        <a href="${link('/cabinet.html')}" class="nav__link ${currentPage === 'cabinet' ? 'active' : ''}">Le Cabinet</a>
         <div class="nav__dropdown">
           <span class="nav__link nav__dropdown-toggle ${isExpertisePage ? 'active' : ''}">Expertises</span>
           <div class="nav__dropdown-menu">
-            ${EXPERTISES.map(e => `<a href="${e.page}" class="nav__dropdown-item ${currentPage === e.id ? 'active' : ''}">${getExpertiseTitle(data, e.id)}</a>`).join('')}
+            ${EXPERTISES.map(e => `<a href="${link(e.page)}" class="nav__dropdown-item ${currentPage === e.id ? 'active' : ''}">${getExpertiseTitle(data, e.id)}</a>`).join('')}
           </div>
         </div>
-        <a href="/blog.html" class="nav__link ${currentPage === 'blog' ? 'active' : ''}">Blog</a>
-        <a href="/contact.html" class="nav__link nav__link--cta">Contact</a>
+        <a href="${link('/blog.html')}" class="nav__link ${currentPage === 'blog' ? 'active' : ''}">Blog</a>
+        <a href="${link('/contact.html')}" class="nav__link nav__link--cta">Contact</a>
       </div>
       <button class="nav__hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -101,12 +117,12 @@ function renderMobileDrawer(data) {
   return `
   <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
   <div class="mobile-drawer" id="mobile-drawer">
-    <a href="/" class="mobile-drawer__link">Accueil</a>
-    <a href="/cabinet.html" class="mobile-drawer__link">Le Cabinet</a>
+    <a href="${link('/')}" class="mobile-drawer__link">Accueil</a>
+    <a href="${link('/cabinet.html')}" class="mobile-drawer__link">Le Cabinet</a>
     <div class="mobile-drawer__section-title">Nos expertises</div>
-    ${EXPERTISES.map(e => `<a href="${e.page}" class="mobile-drawer__sub-link">${getExpertiseTitle(data, e.id)}</a>`).join('')}
-    <a href="/blog.html" class="mobile-drawer__link">Blog</a>
-    <a href="/contact.html" class="mobile-drawer__cta">Nous contacter</a>
+    ${EXPERTISES.map(e => `<a href="${link(e.page)}" class="mobile-drawer__sub-link">${getExpertiseTitle(data, e.id)}</a>`).join('')}
+    <a href="${link('/blog.html')}" class="mobile-drawer__link">Blog</a>
+    <a href="${link('/contact.html')}" class="mobile-drawer__cta">Nous contacter</a>
   </div>`
 }
 
@@ -149,8 +165,8 @@ function renderAccueil(data) {
             <h1 class="hero__title">${(hero.titre || '').replace(/(droit)\s/, '$1<br>')}</h1>
             <p class="hero__subtitle">${hero.description || hero.sousTitre || ''}</p>
             <div class="hero__actions">
-              <a href="/contact.html" class="btn btn--primary">Nous contacter</a>
-              <a href="/cabinet.html" class="btn btn--ghost">Découvrir le cabinet</a>
+              <a href="${link('/contact.html')}" class="btn btn--primary">Nous contacter</a>
+              <a href="${link('/cabinet.html')}" class="btn btn--ghost">Découvrir le cabinet</a>
             </div>
           </div>
           <div class="hero__aside">
@@ -182,7 +198,7 @@ function renderAccueil(data) {
           const desc = exp.description || ''
           const page = e.page || '/'
           return `
-          <a href="${page}" class="expertise-card reveal">
+          <a href="${link(page)}" class="expertise-card reveal">
             <div class="expertise-card__number">${String(i + 1).padStart(2, '0')}</div>
             <h3 class="expertise-card__title">${titre}</h3>
             <p class="expertise-card__text">${desc}</p>
@@ -199,7 +215,7 @@ function renderAccueil(data) {
           <h2 class="section-heading">Le cabinet</h2>
           ${toHtml(cabinet.description)}
           <div style="margin-top: 2rem;">
-            <a href="/cabinet.html" class="btn btn--outline">En savoir plus</a>
+            <a href="${link('/cabinet.html')}" class="btn btn--outline">En savoir plus</a>
           </div>
         </div>
         <div class="grid-editorial__sidebar reveal">
@@ -343,7 +359,7 @@ function renderExpertise(data, page) {
         <div class="grid-editorial__sidebar">
           <div class="sidebar-nav">
             <h4 class="sidebar-nav__title">Nos expertises</h4>
-            ${EXPERTISES.map(e => `<a href="${e.page}" class="sidebar-nav__link ${page === e.id ? 'active' : ''}">${getExpertiseTitle(data, e.id)}</a>`).join('')}
+            ${EXPERTISES.map(e => `<a href="${link(e.page)}" class="sidebar-nav__link ${page === e.id ? 'active' : ''}">${getExpertiseTitle(data, e.id)}</a>`).join('')}
           </div>
 
           ${dossiers.length > 0 ? `
@@ -539,14 +555,14 @@ function renderFooter(data) {
         </div>
         <div>
           <h4 class="footer__col-title">Le cabinet</h4>
-          <a href="/" class="footer__link">Accueil</a>
-          <a href="/cabinet.html" class="footer__link">L'équipe</a>
-          <a href="/blog.html" class="footer__link">Blog</a>
-          <a href="/contact.html" class="footer__link">Contact</a>
+          <a href="${link('/')}" class="footer__link">Accueil</a>
+          <a href="${link('/cabinet.html')}" class="footer__link">L'équipe</a>
+          <a href="${link('/blog.html')}" class="footer__link">Blog</a>
+          <a href="${link('/contact.html')}" class="footer__link">Contact</a>
         </div>
         <div>
           <h4 class="footer__col-title">Expertises</h4>
-          ${EXPERTISES.slice(0, 5).map(e => `<a href="${e.page}" class="footer__link">${getExpertiseTitle(data, e.id)}</a>`).join('')}
+          ${EXPERTISES.slice(0, 5).map(e => `<a href="${link(e.page)}" class="footer__link">${getExpertiseTitle(data, e.id)}</a>`).join('')}
         </div>
         <div>
           <h4 class="footer__col-title">Contact</h4>
@@ -556,7 +572,7 @@ function renderFooter(data) {
       </div>
       <div class="footer__bottom">
         <span>&copy; ${new Date().getFullYear()} Hélians — Tous droits réservés</span>
-        <a href="/mentions.html">Mentions légales</a>
+        <a href="${link('/mentions.html')}">Mentions légales</a>
       </div>
     </div>
   </footer>`
