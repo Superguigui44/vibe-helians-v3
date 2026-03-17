@@ -88,7 +88,7 @@ function renderNav(data, currentPage) {
   <nav class="nav" id="navbar">
     <div class="nav__inner">
       <a href="${link('/')}" class="nav__logo">
-        <img src="/images/logo.jpg" alt="Hélians" />
+        <img src="${link('/images/logo.jpg')}" alt="Hélians" />
         <div>
           <span class="nav__logo-text">Hélians</span>
           <span class="nav__logo-sub">Avocats Conseils</span>
@@ -240,9 +240,9 @@ function renderCabinet(data) {
   const membres = equipe.membres || []
 
   const photoMap = {
-    'Gilles CAILLET': '/images/gilles-caillet.jpg',
-    'Xavier VIDALIE': '/images/xavier-vidalie.jpg',
-    'Noémie PAJOT': '/images/noemie-pajot.jpg',
+    'Gilles CAILLET': link('/images/gilles-caillet.jpg'),
+    'Xavier VIDALIE': link('/images/xavier-vidalie.jpg'),
+    'Noémie PAJOT': link('/images/noemie-pajot.jpg'),
   }
 
   // Extract first paragraph as intro, rest as detailed description
@@ -548,7 +548,7 @@ function renderFooter(data) {
       <div class="footer__grid">
         <div>
           <div class="footer__brand">
-            <img src="/images/logo.jpg" alt="Hélians" />
+            <img src="${link('/images/logo.jpg')}" alt="Hélians" />
             <span class="footer__brand-name">Hélians</span>
           </div>
           <p class="footer__desc">Société d'avocats dédiée au droit immobilier et au droit public.</p>
