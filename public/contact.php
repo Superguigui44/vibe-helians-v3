@@ -39,8 +39,11 @@ if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-// Load mail config
-$configPath = __DIR__ . '/../mail-config.php';
+// Load mail config — try same directory first (maquette), then parent (production)
+$configPath = __DIR__ . '/mail-config.php';
+if (!file_exists($configPath)) {
+    $configPath = __DIR__ . '/../mail-config.php';
+}
 if (!file_exists($configPath)) {
     http_response_code(500);
     echo json_encode(['success' => false, 'message' => 'Configuration email manquante.']);
