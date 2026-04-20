@@ -117,9 +117,9 @@ function loadContent(): array {
 function saveContent(array $content): void {
     global $config;
     $path = $config['content_file'] ?? (__DIR__ . '/../../content.json');
-    // Rotating backup: keep last 5 versions (.bak.1 = most recent, .bak.5 = oldest)
+    // Rotating backup: keep last 10 versions (.bak.1 = most recent, .bak.10 = oldest)
     if (file_exists($path)) {
-        for ($i = 4; $i >= 1; $i--) {
+        for ($i = 9; $i >= 1; $i--) {
             $src = $path . '.bak.' . $i;
             $dst = $path . '.bak.' . ($i + 1);
             if (file_exists($src)) {
