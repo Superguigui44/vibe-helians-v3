@@ -15,6 +15,17 @@ $article = ($id !== null && isset($articles[$id])) ? $articles[$id] : null;
 $isEdit = $article !== null;
 $blogFields = $config['blog']['fields'] ?? [];
 
+// Tags déjà utilisés dans tous les articles (déduplication insensible à la casse)
+$existingTags = [];
+foreach ($articles as $a) {
+    foreach (($a['tags'] ?? []) as $t) {
+        $key = mb_strtolower(trim($t));
+        if ($key !== '' && !isset($existingTags[$key])) $existingTags[$key] = $t;
+    }
+}
+$existingTags = array_values($existingTags);
+sort($existingTags, SORT_NATURAL | SORT_FLAG_CASE);
+
 $pageTitle = $isEdit ? 'Modifier l\'article' : 'Nouvel article';
 echo renderHeader($pageTitle, 'blog');
 ?>
@@ -62,8 +73,19 @@ echo renderHeader($pageTitle, 'blog');
                             <?php foreach ((is_array($value) ? $value : []) as $tag): ?>
                                 <span class="tag-pill"><?= htmlspecialchars($tag) ?> <button type="button" onclick="removeTag(this)">&times;</button></span>
                             <?php endforeach; ?>
-                            <input type="text" id="tag-input" placeholder="Ajouter un tag + Entrée" style="border: none; outline: none; flex: 1; min-width: 120px; padding: 0.3rem;">
+                            <input type="text" id="tag-input" list="existing-tags" placeholder="Ajouter un tag + Entrée" style="border: none; outline: none; flex: 1; min-width: 120px; padding: 0.3rem;">
                         </div>
+                        <datalist id="existing-tags">
+                            <?php foreach ($existingTags as $t): ?><option value="<?= htmlspecialchars($t) ?>"><?php endforeach; ?>
+                        </datalist>
+                        <?php if ($existingTags): ?>
+                            <div class="tag-suggestions" id="tag-suggestions" aria-label="Tags déjà utilisés — cliquer pour ajouter">
+                                <span class="tag-suggestions-label">Tags existants :</span>
+                                <?php foreach ($existingTags as $t): ?>
+                                    <button type="button" class="tag-suggestion" data-tag="<?= htmlspecialchars($t) ?>"><?= htmlspecialchars($t) ?></button>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
                     <?php break;
                     case 'richtext': ?>
                         <div id="editor-<?= $key ?>"><?= $value ?></div>
@@ -117,30 +139,55 @@ document.querySelectorAll('[id^="editor-"]').forEach(el => {
 
 // Tags
 const tagInput = document.getElementById('tag-input');
-if (tagInput) {
-    tagInput.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ',') {
-            e.preventDefault();
-            const val = tagInput.value.trim().replace(',', '');
-            if (val) {
-                const pill = document.createElement('span');
-                pill.className = 'tag-pill';
-                pill.innerHTML = val + ' <button type="button" onclick="removeTag(this)">&times;</button>';
-                tagInput.parentNode.insertBefore(pill, tagInput);
-                tagInput.value = '';
-            }
-        }
-    });
-}
 
-function removeTag(btn) {
-    btn.parentElement.remove();
+function escapeHtml(s) {
+    return String(s).replace(/[<>&"']/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
 function getTags() {
     const pills = document.querySelectorAll('#tags-container .tag-pill');
     return Array.from(pills).map(p => p.textContent.replace('×', '').trim());
 }
+
+function addTag(val) {
+    val = String(val || '').trim().replace(/,$/, '').trim();
+    if (!val) return;
+    const existing = getTags().map(t => t.toLowerCase());
+    if (existing.includes(val.toLowerCase())) return;
+    const pill = document.createElement('span');
+    pill.className = 'tag-pill';
+    pill.innerHTML = escapeHtml(val) + ' <button type="button" onclick="removeTag(this)">&times;</button>';
+    tagInput.parentNode.insertBefore(pill, tagInput);
+    refreshSuggestionsState();
+}
+
+function removeTag(btn) {
+    btn.parentElement.remove();
+    refreshSuggestionsState();
+}
+
+function refreshSuggestionsState() {
+    const active = new Set(getTags().map(t => t.toLowerCase()));
+    document.querySelectorAll('.tag-suggestion').forEach(btn => {
+        btn.classList.toggle('is-active', active.has(btn.dataset.tag.toLowerCase()));
+    });
+}
+
+if (tagInput) {
+    tagInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ',') {
+            e.preventDefault();
+            addTag(tagInput.value);
+            tagInput.value = '';
+        }
+    });
+}
+
+document.querySelectorAll('.tag-suggestion').forEach(btn => {
+    btn.addEventListener('click', () => addTag(btn.dataset.tag));
+});
+
+refreshSuggestionsState();
 
 // Image upload
 function uploadBlogImage(input, fieldKey) {

@@ -156,6 +156,7 @@ body {
 .login-link a:hover { text-decoration: underline; }
 
 /* ===== Forms ===== */
+#article-form { display: flex; flex-direction: column; gap: 2rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
 .form-group label {
     font-size: 0.85rem;
@@ -316,6 +317,27 @@ body {
     padding: 0;
     line-height: 1;
 }
+.tag-suggestions {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;
+    margin-top: 0.5rem; padding: 0.6rem 0.75rem;
+    background: var(--admin-bg);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+}
+.tag-suggestions-label { font-size: 0.75rem; color: var(--admin-muted); margin-right: 0.25rem; }
+.tag-suggestion {
+    background: var(--admin-white); color: var(--admin-text);
+    border: 1px solid var(--admin-border); border-radius: 4px;
+    padding: 0.2rem 0.55rem; font-size: 0.78rem; cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+}
+.tag-suggestion:hover { border-color: var(--admin-primary); color: var(--admin-primary); }
+.tag-suggestion.is-active {
+    background: var(--admin-primary); color: white;
+    border-color: var(--admin-primary); cursor: default; opacity: 0.6;
+}
+.tag-suggestion.is-active:hover { color: white; }
 
 /* ===== Image Upload ===== */
 .image-upload {
