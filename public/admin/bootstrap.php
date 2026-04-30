@@ -176,7 +176,7 @@ function renderHeader(string $title, string $activePage = ''): string {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title>' . htmlspecialchars($title) . ' — ' . $siteName . '</title>
-    <link rel="stylesheet" href="/admin/assets/admin.css">
+    <link rel="stylesheet" href="/admin/assets/admin.css?v=' . @filemtime(__DIR__ . "/assets/admin.css") . '">
 </head>
 <body>
 <div class="admin-layout">
